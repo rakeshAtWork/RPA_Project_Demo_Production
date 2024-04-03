@@ -1,0 +1,268 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransection" this:ProcessTransection.in_CompanyName="WEX Academy Inc." this:ProcessTransection.in_ExpectedPrice="70" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_CompanyName" Type="InArgument(x:String)" />
+    <x:Property Name="in_ExpectedPrice" Type="InArgument(x:Decimal)" />
+    <x:Property Name="out_StatusMessage" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>834.4,2775.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessTransection_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ProcessTransection" sap:VirtualizedContainerService.HintSize="668.8,2710.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: RPA Stock Market" sap:VirtualizedContainerService.HintSize="606.4,2598.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,2381.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="PreMarketValue" />
+              <Variable x:TypeArguments="x:Decimal" Name="PreMarketDouble" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Company Name" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_CompanyName]" ScopeIdentifier="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>----- Select -----</x:String>
+                  <x:String>Exenon UI Pharma.</x:String>
+                  <x:String>WEX Academy Inc.</x:String>
+                  <x:String>Exxon RPA Corp.</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvTextArea="109, 392, 55, 20" CvTextArgument="Select" CvType="Text" DesignTimeRectangle="59, 386, 200, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl id='country' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='country' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="cf0c80e7-3e1c-4547-85bf-302678cd174a" InformativeScreenshot="92282c7d724f0e2c856fcb9740429dae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="264, 386, 27, 27" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='image' class='' aaname='' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on search Icon" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="264, 386, 27, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='image' class='' aaname='' /&gt;" Guid="e06e7a06-4d3f-410a-b43a-65f5ac208085" InformativeScreenshot="3e434b995726056b8d02eb1b534e18cd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="70, 321, 49, 14" CvTextArgument="Home &gt;" CvType="Text" DesignTimeRectangle="72, 319, 49, 18" ElementType="Text" FriendlyName="'Home &gt;'" FullSelectorArgument="&lt;webctrl aaname='Home &amp;gt;' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home &amp;gt;' tag='A' type='' class='' check:innerText='Home &amp;gt;' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="get the premarket value" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" TextString="[PreMarketValue]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvTextArea="346, 522, 112, 46" CvType="AnyWordGroup" DesignTimeRectangle="349, 514, 109, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'39.95'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' class='' /&gt;" Guid="2214ac9d-fa62-4ebb-8195-6f95be6d4670" InformativeScreenshot="c02f8f7707cd68db30886b8a87fb6a74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="364, 492, 96, 16" CvTextArgument="PREMARKET" CvType="Text" DesignTimeRectangle="365, 489, 94, 23" ElementType="Text" FriendlyName="'PREMARKET'" FullSelectorArgument="&lt;webctrl tag='H6' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H6' type='' class='' aaname='PREMARKET' check:innerText='PREMARKET' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <TryCatch DisplayName="Trying to parse the string to decimal of MarketPrice" sap:VirtualizedContainerService.HintSize="510.4,313.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Decimal">[PreMarketDouble]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Decimal">[CDec(PreMarketValue)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Exception Caught while Parsing the string to Double&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <If sap2010:Annotation.AnnotationText="Based on the business condition here, I am deciding weather to buy or sell." Condition="[PreMarketDouble &gt; in_ExpectedPrice]" sap:VirtualizedContainerService.HintSize="510.4,1320" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="476.8,552.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sell'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvElementArea="746, 341, 71, 44" CvTextArea="766, 351, 30, 18" CvTextArgument="Sell" CvType="Button" DesignTimeRectangle="749, 342, 66, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Sell'" FullSelectorArgument="&lt;webctrl aaname='Sell' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sell' tag='A' type='' class='' check:innerText='Sell' /&gt;" Guid="1c986bea-a3b6-421e-bf69-790303b163a7" InformativeScreenshot="a5592988af2ce523606d882b167e3504.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="657, 341, 71, 43" CvTextArea="676, 352, 33, 20" CvTextArgument="Buy" CvType="Button" DesignTimeRectangle="659, 342, 68, 40" ElementType="Text" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl aaname='Buy' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buy' tag='A' type='' class='' check:innerText='Buy' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked on Sell Button ..&quot;]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[out_StatusMessage]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[string .Format("{0} share has been sell on a price of: {1}",in_CompanyName,PreMarketValue)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="476.8,552.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1e54773-4ac2-4072-8b7d-d1440e2c5f39" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvElementArea="657, 341, 71, 43" CvTextArea="676, 352, 33, 20" CvTextArgument="Buy" CvType="Button" DesignTimeRectangle="659, 342, 68, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl aaname='Buy' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buy' tag='A' type='' class='' check:innerText='Buy' /&gt;" Guid="531d4a01-b672-47e6-8236-e6a312df4c8a" InformativeScreenshot="a17ebf1b03200db4d6fdf0982ea428d9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="746, 341, 71, 44" CvTextArea="766, 351, 30, 18" CvTextArgument="Sell" CvType="Button" DesignTimeRectangle="749, 342, 66, 40" ElementType="Text" FriendlyName="'Sell'" FullSelectorArgument="&lt;webctrl aaname='Sell' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sell' tag='A' type='' class='' check:innerText='Sell' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked on Buy Button ..&quot;]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[out_StatusMessage]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[string .Format("{0} share has been bought on a price of: {1}",in_CompanyName,PreMarketValue)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="4295955f18158a09cba5caa5293d36a7.jpg" Selector="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" Title="RPA Stock Market" Url="https://rpachallenge.com/assets/rpaStockMarket/index.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
